@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GX21+ | Evolua+</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; margin: 0; }
+    
+    .font-orbitron { font-family: 'Orbitron', sans-serif; }
+    .font-inter { font-family: 'Inter', sans-serif; }
+    
+    .metallic-text {
+      background: linear-gradient(135deg, #e8e8e8 0%, #a0a0a0 25%, #ffffff 50%, #a0a0a0 75%, #c0c0c0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    }
+    
+    .brushed-steel {
+      background: linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 25%, #2a2a2a 50%, #3d3d3d 75%, #2a2a2a 100%);
+      background-size: 400% 400%;
+    }
+    
+    .glow-border {
+      box-shadow: 0 0 20px rgba(120, 180, 255, 0.15), 
+                  inset 0 1px 0 rgba(255,255,255,0.1),
+                  inset 0 -1px 0 rgba(0,0,0,0.3);
+    }
+    
+    .premium-btn {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      border: 1px solid rgba(120, 180, 255, 0.3);
+      box-shadow: 0 4px 15px rgba(15, 52, 96, 0.4),
+                  inset 0 1px 0 rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .premium-btn:hover {
+      box-shadow: 0 6px 25px rgba(120, 180, 255, 0.3),
+                  inset 0 1px 0 rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+    }
+    
+    .card-steel {
+      background: linear-gradient(145deg, #1a1a1a 0%, #252525 50%, #1a1a1a 100%);
+      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5),
+                  inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+    
+    .input-steel {
+      background: linear-gradient(145deg, #0d0d0d 0%, #1a1a1a 100%);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .input-steel:focus {
+      border-color: rgba(120, 180, 255, 0.5);
+      box-shadow: 0 0 20px rgba(120, 180, 255, 0.1);
+    }
+    
+    .hero-gradient {
+      background: radial-gradient(ellipse at top, #0a1628 0%, #050a12 50%, #000000 100%);
+    }
+    
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .pulse-glow {
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+    
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 20px rgba(120, 180, 255, 0.2); }
+      50% { box-shadow: 0 0 40px rgba(120, 180, 255, 0.4); }
+    }
+    
+    .grid-bg {
+      background-image: 
+        linear-gradient(rgba(120, 180, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120, 180, 255, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+
+    .scroll-container {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .feature-icon {
+      background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+      border: 1px solid rgba(120, 180, 255, 0.2);
+    }
+
+    .step-number {
+      background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+      border: 2px solid rgba(120, 180, 255, 0.3);
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+ </head>
+
+ <body class="h-full bg-black font-inter text-gray-300">
+  <div class="scroll-container"><!-- Hero Section -->
+   <section class="hero-gradient grid-bg min-h-screen relative overflow-hidden"><!-- Ambient Light Effects -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 py-20 flex flex-col items-center justify-center min-h-screen"><!-- Logo -->
+     <div class="mb-8 floating">
+      <div class="relative">
+       <svg width="180" height="80" viewbox="0 0 180 80" class="drop-shadow-2xl"><defs>
+         <lineargradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#e8e8e8" />
+          <stop offset="25%" style="stop-color:#a0a0a0" />
+          <stop offset="50%" style="stop-color:#ffffff" />
+          <stop offset="75%" style="stop-color:#a0a0a0" />
+          <stop offset="100%" style="stop-color:#c0c0c0" />
+         </lineargradient>
+         <filter id="glow">
+          <fegaussianblur stddeviation="2" result="coloredBlur" />
+          <femerge>
+           <femergenode in="coloredBlur" />
+           <femergenode in="SourceGraphic" />
+          </femerge>
+         </filter>
+        </defs> <text x="90" y="55" text-anchor="middle" font-family="Orbitron" font-weight="800" font-size="42" fill="url(#metalGrad)" filter="url(#glow)">
+         GX21+
+        </text>
+       </svg>
+      </div>
+     </div><!-- Main Headline -->
+     <h1 id="hero-title" class="font-orbitron text-4xl md:text-6xl lg:text-7xl font-bold text-center mb-4 metallic-text">EVOLUA SUA MENTE</h1>
+     <p id="hero-subtitle" class="font-orbitron text-lg md:text-xl text-cyan-400/80 text-center mb-8 tracking-widest">A REVOLUÇÃO MENTAL DA GERAÇÃO Z</p><!-- Free Badge -->
+     <div class="mb-10 pulse-glow rounded-full px-8 py-3 bg-gradient-to-r from-emerald-900/50 to-cyan-900/50 border border-emerald-500/30"><span class="font-orbitron text-sm md:text-base text-emerald-400 tracking-wider"> ✦ 100% GRATUITO • SEM ANÚNCIOS ✦ </span>
+     </div>
+
+     <!-- CTA Button (download direto) -->
+     <a
+       href="https://github.com/gabrielsilvasandes2/gx21plus/releases/download/Version/Evolua.apk"
+       download
+       rel="noopener noreferrer"
+       class="premium-btn px-10 py-4 rounded-lg font-orbitron font-semibold text-white tracking-wider flex items-center gap-3 text-lg"
+     >
+      <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M17.523 2H6.477C5.116 2 4 3.116 4 4.477v15.046C4 20.884 5.116 22 6.477 22h11.046C18.884 22 20 20.884 20 19.523V4.477C20 3.116 18.884 2 17.523 2zM12 20.5c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm5-4H7V5h10v11.5z" />
+      </svg>
+      BAIXAR EVOLUA+ PARA ANDROID
+     </a>
+
+     <!-- Scroll Indicator -->
+     <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+     </div>
+    </div>
+   </section>
+
+   <!-- About Section -->
+   <section class="relative py-24 bg-gradient-to-b from-black via-gray-950 to-black">
+    <div class="max-w-5xl mx-auto px-6">
+     <div class="text-center mb-16"><span class="font-orbitron text-cyan-500/60 text-sm tracking-[0.3em] mb-4 block">CONHEÇA</span>
+      <h2 id="about-title" class="font-orbitron text-3xl md:text-5xl font-bold metallic-text mb-6">QUEM SOMOS</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent mx-auto"></div>
+     </div>
+     <div class="card-steel rounded-2xl p-8 md:p-12">
+      <p class="text-lg md:text-xl leading-relaxed text-gray-400 text-center mb-8">A <span class="text-white font-semibold">GX21+</span> nasceu com uma missão clara: <span class="text-cyan-400">ajudar jovens a evoluírem mentalmente</span>, estudar de forma mais inteligente e desenvolver foco absoluto <span class="text-emerald-400 font-medium">sem depender de cursinhos caros</span>.</p>
+      <p class="text-lg md:text-xl leading-relaxed text-gray-400 text-center mb-8">Acreditamos que todo mundo merece acesso às melhores ferramentas de desenvolvimento pessoal. Por isso criamos o <span class="text-white font-semibold">Evolua+</span>: um aplicativo moderno, intuitivo e completamente gratuito.</p>
+      <div class="flex flex-wrap justify-center gap-6 mt-10">
+       <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10"><span class="text-2xl">🚀</span> <span class="text-gray-300 font-medium">Inovador</span>
+       </div>
+       <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10"><span class="text-2xl">💡</span> <span class="text-gray-300 font-medium">Acessível</span>
+       </div>
+       <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-white/5 border border-white/10"><span class="text-2xl">⚡</span> <span class="text-gray-300 font-medium">Moderno</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <!-- Features Section -->
+   <section class="relative py-24 bg-gradient-to-b from-black to-gray-950 grid-bg">
+    <div class="max-w-6xl mx-auto px-6">
+     <div class="text-center mb-16"><span class="font-orbitron text-cyan-500/60 text-sm tracking-[0.3em] mb-4 block">POR QUE ESCOLHER</span>
+      <h2 class="font-orbitron text-3xl md:text-5xl font-bold metallic-text mb-6">NOSSOS DIFERENCIAIS</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent mx-auto"></div>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card-steel rounded-xl p-8 hover:scale-[1.02] transition-transform duration-300">
+       <div class="feature-icon w-16 h-16 rounded-xl flex items-center justify-center mb-6"><span class="text-3xl">💰</span></div>
+       <h3 class="font-orbitron text-xl font-semibold text-white mb-3">100% Gratuito</h3>
+       <p class="text-gray-400 leading-relaxed">Todas as funcionalidades liberadas. Sem planos pagos, sem surpresas. Evolua sem gastar nada.</p>
+      </div>
+
+      <div class="card-steel rounded-xl p-8 hover:scale-[1.02] transition-transform duration-300">
+       <div class="feature-icon w-16 h-16 rounded-xl flex items-center justify-center mb-6"><span class="text-3xl">🚫</span></div>
+       <h3 class="font-orbitron text-xl font-semibold text-white mb-3">Zero Anúncios</h3>
+       <p class="text-gray-400 leading-relaxed">Experiência limpa e sem interrupções. Seu foco é sagrado, e a gente respeita isso.</p>
+      </div>
+
+      <div class="card-steel rounded-xl p-8 hover:scale-[1.02] transition-transform duration-300">
+       <div class="feature-icon w-16 h-16 rounded-xl flex items-center justify-center mb-6"><span class="text-3xl">✨</span></div>
+       <h3 class="font-orbitron text-xl font-semibold text-white mb-3">Interface Moderna</h3>
+       <p class="text-gray-400 leading-relaxed">Design minimalista e intuitivo. Você não precisa pensar, só usar.</p>
+      </div>
+
+      <div class="card-steel rounded-xl p-8 hover:scale-[1.02] transition-transform duration-300">
+       <div class="feature-icon w-16 h-16 rounded-xl flex items-center justify-center mb-6"><span class="text-3xl">🎯</span></div>
+       <h3 class="font-orbitron text-xl font-semibold text-white mb-3">Modo Foco</h3>
+       <p class="text-gray-400 leading-relaxed">Ferramentas práticas para manter a concentração e render mais nos estudos.</p>
+      </div>
+
+      <div class="card-steel rounded-xl p-8 hover:scale-[1.02] transition-transform duration-300">
+       <div class="feature-icon w-16 h-16 rounded-xl flex items-center justify-center mb-6"><span class="text-3xl">📚</span></div>
+       <h3 class="font-orbitron text-xl font-semibold text-white mb-3">Sessões de Estudo</h3>
+       <p class="text-gray-400 leading-relaxed">Técnicas comprovadas de produtividade organizadas e prontas para você.</p>
+      </div>
+
+      <div class="card-steel rounded-xl p-8 hover:scale-[1.02] transition-transform duration-300">
+       <div class="feature-icon w-16 h-16 rounded-xl flex items-center justify-center mb-6"><span class="text-3xl">📈</span></div>
+       <h3 class="font-orbitron text-xl font-semibold text-white mb-3">Evolução Pessoal</h3>
+       <p class="text-gray-400 leading-relaxed">Acompanhe seu progresso e veja sua evolução mental acontecendo.</p>
+      </div>
+     </div>
+     <div class="text-center mt-12">
+      <p class="text-xl text-gray-400"><span class="text-cyan-400 font-semibold">Tudo pronto.</span> A faca e o queijo na mão. <span class="text-white">Só começar.</span></p>
+     </div>
+    </div>
+   </section>
+
+   <!-- Download Section -->
+   <section id="download" class="relative py-24 bg-gradient-to-b from-gray-950 via-[#0a1628] to-black overflow-hidden">
+    <div class="absolute top-1/2 left-0 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/3 right-0 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl"></div>
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+     <div class="text-center mb-16"><span class="font-orbitron text-cyan-500/60 text-sm tracking-[0.3em] mb-4 block">COMECE AGORA</span>
+      <h2 id="download-title" class="font-orbitron text-3xl md:text-5xl font-bold metallic-text mb-6">BAIXE O EVOLUA+</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent mx-auto"></div>
+     </div>
+
+     <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="flex justify-center">
+       <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-3xl blur-2xl"></div>
+        <div class="relative card-steel rounded-3xl p-8 pulse-glow">
+         <div class="w-48 h-80 md:w-56 md:h-96 bg-gradient-to-b from-gray-900 to-black rounded-2xl border border-gray-700 flex flex-col items-center justify-center relative overflow-hidden">
+          <div class="absolute top-4 w-20 h-1.5 bg-gray-700 rounded-full"></div>
+          <div class="text-center px-4">
+           <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center"><span class="font-orbitron font-bold text-white text-lg">E+</span></div>
+           <p class="font-orbitron text-white text-sm font-semibold mb-2">EVOLUA+</p>
+           <p class="text-gray-500 text-xs">by GX21+</p>
+          </div>
+          <div class="absolute bottom-4 w-10 h-10 border-2 border-gray-600 rounded-full"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+
+      <div>
+       <div class="card-steel rounded-2xl p-8">
+        <h3 class="font-orbitron text-xl font-semibold text-white mb-6 flex items-center gap-3">
+         <svg class="w-6 h-6 text-emerald-400" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /></svg>
+         Como instalar (é simples!)
+        </h3>
+
+        <div class="space-y-4">
+         <div class="flex items-start gap-4">
+          <div class="step-number w-8 h-8 rounded-full flex items-center justify-center text-white font-orbitron font-bold text-sm shrink-0">1</div>
+          <p class="text-gray-300 pt-1">Clique no botão abaixo para baixar o arquivo APK</p>
+         </div>
+         <div class="flex items-start gap-4">
+          <div class="step-number w-8 h-8 rounded-full flex items-center justify-center text-white font-orbitron font-bold text-sm shrink-0">2</div>
+          <p class="text-gray-300 pt-1">Abra o arquivo APK baixado no seu celular</p>
+         </div>
+         <div class="flex items-start gap-4">
+          <div class="step-number w-8 h-8 rounded-full flex items-center justify-center text-white font-orbitron font-bold text-sm shrink-0">3</div>
+          <p class="text-gray-300 pt-1">Permita a instalação de apps externos (apenas para este app)</p>
+         </div>
+         <div class="flex items-start gap-4">
+          <div class="step-number w-8 h-8 rounded-full flex items-center justify-center text-white font-orbitron font-bold text-sm shrink-0">4</div>
+          <p class="text-gray-300 pt-1">Confirme a instalação e pronto!</p>
+         </div>
+        </div>
+
+        <div class="mt-8 p-4 rounded-xl bg-emerald-900/20 border border-emerald-500/20">
+         <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="currentColor" viewbox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" /></svg>
+          <p class="text-emerald-300 text-sm"><span class="font-semibold">100% Seguro:</span> Nosso app é verificado e não contém vírus ou malware.</p>
+         </div>
+        </div>
+
+        <!-- Botão de download (download direto) -->
+        <a
+          href="https://github.com/gabrielsilvasandes2/gx21plus/releases/download/Version/Evolua.apk"
+          download
+          rel="noopener noreferrer"
+          class="mt-8 premium-btn w-full py-4 rounded-xl font-orbitron font-semibold text-white tracking-wider flex items-center justify-center gap-3 text-lg"
+        >
+         <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" /></svg>
+         BAIXAR APK AGORA
+        </a>
+
+        <p class="text-center text-gray-500 text-sm mt-4">Disponível para Android • ~15MB</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <!-- Contact Section -->
+   <section class="relative py-24 bg-gradient-to-b from-black to-gray-950">
+    <div class="max-w-xl mx-auto px-6">
+     <div class="text-center mb-12"><span class="font-orbitron text-cyan-500/60 text-sm tracking-[0.3em] mb-4 block">CONECTE-SE</span>
+      <h2 id="contact-title" class="font-orbitron text-3xl md:text-4xl font-bold metallic-text mb-6">FAÇA PARTE DA EVOLUÇÃO</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent mx-auto mb-6"></div>
+      <p class="text-gray-400">Entre para a comunidade GX21+ e receba novidades em primeira mão.</p>
+     </div>
+     <form id="contact-form" class="card-steel rounded-2xl p-8">
+      <div class="space-y-6">
+       <div><label for="name" class="block text-gray-400 text-sm mb-2 font-medium">Seu Nome</label> <input type="text" id="name" name="name" required placeholder="Como podemos te chamar?" class="input-steel w-full px-5 py-4 rounded-xl text-white placeholder-gray-600 focus:outline-none"></div>
+       <div><label for="email" class="block text-gray-400 text-sm mb-2 font-medium">Seu E-mail</label> <input type="email" id="email" name="email" required placeholder="email@exemplo.com" class="input-steel w-full px-5 py-4 rounded-xl text-white placeholder-gray-600 focus:outline-none"></div>
+       <button type="submit" id="submit-btn" class="premium-btn w-full py-4 rounded-xl font-orbitron font-semibold text-white tracking-wider flex items-center justify-center gap-3">
+        <span id="btn-text">QUERO EVOLUIR</span>
+        <svg id="btn-spinner" class="hidden w-5 h-5 animate-spin" fill="none" viewbox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle> <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" /></svg>
+       </button>
+      </div>
+
+      <div id="success-message" class="hidden mt-6 p-4 rounded-xl bg-emerald-900/30 border border-emerald-500/30 text-center">
+       <div class="flex items-center justify-center gap-2 text-emerald-400">
+        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /></svg>
+        <span class="font-semibold">Cadastro realizado!</span>
+       </div>
+       <p class="text-gray-400 text-sm mt-2">Bem-vindo à evolução GX21+</p>
+      </div>
+
+      <div id="error-message" class="hidden mt-6 p-4 rounded-xl bg-red-900/30 border border-red-500/30 text-center">
+       <p class="text-red-400 text-sm">Ops! Algo deu errado. Tente novamente.</p>
+      </div>
+     </form>
+    </div>
+   </section>
+
+   <!-- Footer -->
+   <footer class="py-12 bg-black border-t border-gray-900">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+     <div class="font-orbitron text-2xl font-bold metallic-text mb-4">GX21+</div>
+     <p class="text-gray-500 text-sm mb-2">Evoluindo mentes. Transformando futuros.</p>
+     <p class="text-gray-600 text-xs">© 2026 GX21+ • Todos os direitos reservados</p>
+    </div>
+   </footer>
+  </div>
+
+  <script>
+    const defaultConfig = {
+      hero_title: 'EVOLUA SUA MENTE',
+      hero_subtitle: 'A REVOLUÇÃO MENTAL DA GERAÇÃO Z',
+      about_title: 'QUEM SOMOS',
+      download_title: 'BAIXE O EVOLUA+',
+      contact_title: 'FAÇA PARTE DA EVOLUÇÃO',
+      background_color: '#000000',
+      surface_color: '#1a1a1a',
+      text_color: '#d1d5db',
+      primary_action_color: '#0f3460',
+      accent_color: '#22d3ee',
+      font_family: 'Inter',
+      font_size: 16
+    };
+
+    let config = { ...defaultConfig };
+
+    // >>> WhatsApp community link (novo)
+    const WHATSAPP_COMMUNITY_URL = 'https://chat.whatsapp.com/HrG8llO6GlXEqEagKizItf';
+
+    const dataHandler = {
+      onDataChanged(data) {}
+    };
+
+    async function initApp() {
+      if (window.elementSdk) {
+        window.elementSdk.init({
+          defaultConfig,
+          onConfigChange: async (newConfig) => {
+            config = { ...defaultConfig, ...newConfig };
+            updateUI();
+          },
+          mapToCapabilities: (cfg) => ({
+            recolorables: [
+              { get: () => cfg.background_color || defaultConfig.background_color, set: (v) => { cfg.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
+              { get: () => cfg.surface_color || defaultConfig.surface_color, set: (v) => { cfg.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
+              { get: () => cfg.text_color || defaultConfig.text_color, set: (v) => { cfg.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+              { get: () => cfg.primary_action_color || defaultConfig.primary_action_color, set: (v) => { cfg.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); } },
+              { get: () => cfg.accent_color || defaultConfig.accent_color, set: (v) => { cfg.accent_color = v; window.elementSdk.setConfig({ accent_color: v }); } }
+            ],
+            borderables: [],
+            fontEditable: {
+              get: () => cfg.font_family || defaultConfig.font_family,
+              set: (v) => { cfg.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
+            },
+            fontSizeable: {
+              get: () => cfg.font_size || defaultConfig.font_size,
+              set: (v) => { cfg.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
+            }
+          }),
+          mapToEditPanelValues: (cfg) => new Map([
+            ['hero_title', cfg.hero_title || defaultConfig.hero_title],
+            ['hero_subtitle', cfg.hero_subtitle || defaultConfig.hero_subtitle],
+            ['about_title', cfg.about_title || defaultConfig.about_title],
+            ['download_title', cfg.download_title || defaultConfig.download_title],
+            ['contact_title', cfg.contact_title || defaultConfig.contact_title]
+          ])
+        });
+      }
+
+      if (window.dataSdk) {
+        const result = await window.dataSdk.init(dataHandler);
+        if (!result.isOk) console.error('Failed to initialize Data SDK');
+      }
+
+      setupForm();
+    }
+
+    function updateUI() {
+      const heroTitle = document.getElementById('hero-title');
+      const heroSubtitle = document.getElementById('hero-subtitle');
+      const aboutTitle = document.getElementById('about-title');
+      const downloadTitle = document.getElementById('download-title');
+      const contactTitle = document.getElementById('contact-title');
+
+      if (heroTitle) heroTitle.textContent = config.hero_title || defaultConfig.hero_title;
+      if (heroSubtitle) heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      if (aboutTitle) aboutTitle.textContent = config.about_title || defaultConfig.about_title;
+      if (downloadTitle) downloadTitle.textContent = config.download_title || defaultConfig.download_title;
+      if (contactTitle) contactTitle.textContent = config.contact_title || defaultConfig.contact_title;
+
+      const customFont = config.font_family || defaultConfig.font_family;
+      document.body.style.fontFamily = `${customFont}, Inter, sans-serif`;
+
+      const baseSize = config.font_size || defaultConfig.font_size;
+      document.body.style.fontSize = `${baseSize}px`;
+
+      document.documentElement.style.setProperty('--bg-color', config.background_color || defaultConfig.background_color);
+      document.documentElement.style.setProperty('--surface-color', config.surface_color || defaultConfig.surface_color);
+      document.documentElement.style.setProperty('--text-color', config.text_color || defaultConfig.text_color);
+      document.documentElement.style.setProperty('--primary-action', config.primary_action_color || defaultConfig.primary_action_color);
+      document.documentElement.style.setProperty('--accent-color', config.accent_color || defaultConfig.accent_color);
+    }
+
+    function setupForm() {
+      const form = document.getElementById('contact-form');
+      const submitBtn = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnSpinner = document.getElementById('btn-spinner');
+      const successMessage = document.getElementById('success-message');
+      const errorMessage = document.getElementById('error-message');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        if (!name || !email) return;
+
+        submitBtn.disabled = true;
+        btnText.textContent = 'ENVIANDO...';
+        btnSpinner.classList.remove('hidden');
+        successMessage.classList.add('hidden');
+        errorMessage.classList.add('hidden');
+
+        try {
+          // tenta salvar no Data SDK (se existir)
+          if (window.dataSdk) {
+            const result = await window.dataSdk.create({
+              name: name,
+              email: email,
+              submitted_at: new Date().toISOString()
+            });
+
+            if (!result.isOk) {
+              errorMessage.classList.remove('hidden');
+              return;
+            }
+          }
+
+          // sucesso (com ou sem dataSdk)
+          successMessage.classList.remove('hidden');
+          form.reset();
+
+          // >>> abre WhatsApp (novo)
+          // pequena espera pra garantir que o usuário veja o "Cadastro realizado!"
+          setTimeout(() => {
+            window.open(WHATSAPP_COMMUNITY_URL, '_blank', 'noopener,noreferrer');
+          }, 600);
+
+        } catch (error) {
+          errorMessage.classList.remove('hidden');
+        } finally {
+          submitBtn.disabled = false;
+          btnText.textContent = 'QUERO EVOLUIR';
+          btnSpinner.classList.add('hidden');
+        }
+      });
+    }
+
+    initApp();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d1c9d60e766501a',t:'MTc3MTc0MzcxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
